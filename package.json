@@ -7,7 +7,11 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "dev:ssr": "ng run corona-live-angular:serve-ssr",
+    "serve:ssr": "node dist/corona-live-angular/server/main.js",
+    "build:ssr": "ng build --prod && ng run corona-live-angular:server:production",
+    "prerender": "ng run corona-live-angular:prerender"
   },
   "private": true,
   "dependencies": {
@@ -16,11 +20,21 @@
     "@angular/compiler": "~9.0.6",
     "@angular/core": "~9.0.6",
     "@angular/forms": "~9.0.6",
+    "@angular/localize": "^9.0.6",
     "@angular/platform-browser": "~9.0.6",
     "@angular/platform-browser-dynamic": "~9.0.6",
+    "@angular/platform-server": "~9.0.6",
     "@angular/router": "~9.0.6",
+    "@ng-bootstrap/ng-bootstrap": "^6.0.0",
+    "@nguniversal/express-engine": "^9.0.2",
+    "bootstrap": "^4.4.1",
+    "express": "^4.15.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
+    "xhr2": "^0.2.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
@@ -28,6 +42,8 @@
     "@angular/cli": "~9.0.6",
     "@angular/compiler-cli": "~9.0.6",
     "@angular/language-service": "~9.0.6",
+    "@nguniversal/builders": "^9.0.2",
+    "@types/express": "^4.17.0",
     "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",

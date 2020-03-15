@@ -1,0 +1,49 @@
+.container {
+    max-width: 400px;
+}
+/* .main-container {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    flex: 1 1 0%;
+    overflow: hidden;
+    border-radius: 10px;
+} */
+
+.scrollable {
+    overflow-y: scroll;
+    max-height: 50vh;
+    /* position: absolute; */
+}
+
+.not-scrollable {
+    overflow: hidden;
+}
+
+small {
+    font-size: 12px;
+}
+
+h5.card-title {
+    font-size: 12px;
+}
+
+p.card-text {
+    font-size: 11px;
+    margin-bottom: 0;
+}
+
+.card-link {
+    font-size: 10px;
+}
+
+.card {
+    border: none;
+    border-bottom-color: rgba(0, 0, 0, 0.125);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+p.card-text .badge {
+    font-size: 11px;
+}

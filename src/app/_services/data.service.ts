@@ -14,4 +14,8 @@ export class DataService {
   getNews(): Observable<News[]> {
     return this.http.get<News[]>(`${environment.apiUrl}/news`);
   }
+
+  getOfficialNews() {
+    return this.http.get("http://www.gov.kz/api/v1/public/content-manager/news?sort-by=created_date:DESC&projects=eq:dsm&page=1&size=10");
+  }
 }

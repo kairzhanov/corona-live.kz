@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from './_services/data.service';
 import { News } from './_models/news';
+import { NewsType } from './_enums/news.enum';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +10,21 @@ import { News } from './_models/news';
 })
 export class AppComponent implements OnInit  {
   title = 'corona-live';
-  news: News[] = []
+  news: News[] = [];
 
   constructor (private dataService: DataService) {}
 
   ngOnInit() {
     // this.getNews();
+    this.getOfficialNews();
+  }
+
+  getOfficialNews() {
+    this.dataService.getOfficialNews().subscribe(result => {
+      console.log(result);
+    }, error => {
+      console.log(error);
+    });
   }
 
   getNews(): void {
